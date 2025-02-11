@@ -1,7 +1,3 @@
-using Amazon.Rekognition;
-using Amazon.Runtime;
-using Hangfire;
-using Hangfire.PostgreSql;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Diagnostics;
 using Microsoft.Extensions.Configuration;
@@ -36,8 +32,13 @@ public static class InfrastructureServiceRegistration
         });
         services.AddScoped<IUnitOfWork, UnitOfWork>();
 
-        //services.AddScoped<IUserRepository, UserRepository>();
-       
+        services.AddScoped<IUserRepository, UserRepository>();
+        services.AddScoped<IUserConversationRepository, UserConversationRepository>();
+        services.AddScoped<IMessageRepository, MessageRepository>();
+        services.AddScoped<IMediaContentRepository, MediaContentRepository>();
+        services.AddScoped<IContactRepository, ContactRepository>();
+        services.AddScoped<IConversationRepository, ConversationRepository>();
+
         return services;
     }
 }

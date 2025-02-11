@@ -10,9 +10,4 @@
     <ProjectReference Include="..\SikiSokoChatApp.Shared\SikiSokoChatApp.Shared.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Entities\" />
-    <Folder Include="Enums\" />
-  </ItemGroup>
-
 </Project>

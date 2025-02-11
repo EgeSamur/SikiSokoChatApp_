@@ -7,16 +7,26 @@ namespace SikiSokoChatApp.Infrastructure.Persistence.Repositories.Base;
 
 public class UnitOfWork : IUnitOfWork
 {
-    public UnitOfWork(ApplicationDbContext context)
+    public UnitOfWork(ApplicationDbContext context, IUserRepository userRepository, IConversationRepository conversationRepository, IContactRepository contactRepository, IMediaContentRepository mediaContentRepository, IMessageRepository messageRepository, IUserConversationRepository userConversationRepository)
     {
         _context = context;
-        //CityRepository = cityRepository;
-      
+        UserRepository = userRepository;
+        ConversationRepository = conversationRepository;
+        ContactRepository = contactRepository;
+        MediaContentRepository = mediaContentRepository;
+        MessageRepository = messageRepository;
+        UserConversationRepository = userConversationRepository;
     }
 
     private readonly ApplicationDbContext _context;
-    
-    //public ICityRepository CityRepository { get; }
+
+    public IUserRepository UserRepository { get; }
+    public IConversationRepository ConversationRepository { get; }
+    public IContactRepository ContactRepository { get; }
+    public IMediaContentRepository MediaContentRepository { get; }
+    public IMessageRepository MessageRepository { get; }
+    public IUserConversationRepository UserConversationRepository { get; }
+
 
     public async Task SaveChangesAsync(CancellationToken cancellationToken = default)
     {
@@ -42,3 +52,5 @@ public class UnitOfWork : IUnitOfWork
         }
     }
 }
+
+
