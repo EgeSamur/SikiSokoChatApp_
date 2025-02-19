@@ -9,7 +9,6 @@ public interface IUnitOfWork
     IUserConversationRepository UserConversationRepository { get; }
     IMessageRepository MessageRepository { get; }
     IMediaContentRepository MediaContentRepository { get; }
-    IContactRepository ContactRepository { get; }
     IConversationRepository ConversationRepository { get; }
 
     Task SaveChangesAsync(CancellationToken cancellationToken = default);

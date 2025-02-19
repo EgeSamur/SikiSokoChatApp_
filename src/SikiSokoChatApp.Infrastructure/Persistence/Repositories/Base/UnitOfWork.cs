@@ -7,12 +7,11 @@ namespace SikiSokoChatApp.Infrastructure.Persistence.Repositories.Base;
 
 public class UnitOfWork : IUnitOfWork
 {
-    public UnitOfWork(ApplicationDbContext context, IUserRepository userRepository, IConversationRepository conversationRepository, IContactRepository contactRepository, IMediaContentRepository mediaContentRepository, IMessageRepository messageRepository, IUserConversationRepository userConversationRepository)
+    public UnitOfWork(ApplicationDbContext context, IUserRepository userRepository, IConversationRepository conversationRepository, IMediaContentRepository mediaContentRepository, IMessageRepository messageRepository, IUserConversationRepository userConversationRepository)
     {
         _context = context;
         UserRepository = userRepository;
         ConversationRepository = conversationRepository;
-        ContactRepository = contactRepository;
         MediaContentRepository = mediaContentRepository;
         MessageRepository = messageRepository;
         UserConversationRepository = userConversationRepository;
@@ -22,7 +21,6 @@ public class UnitOfWork : IUnitOfWork
 
     public IUserRepository UserRepository { get; }
     public IConversationRepository ConversationRepository { get; }
-    public IContactRepository ContactRepository { get; }
     public IMediaContentRepository MediaContentRepository { get; }
     public IMessageRepository MessageRepository { get; }
     public IUserConversationRepository UserConversationRepository { get; }

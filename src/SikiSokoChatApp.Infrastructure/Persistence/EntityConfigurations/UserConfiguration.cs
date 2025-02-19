@@ -14,7 +14,7 @@ public class UserConfiguration : IEntityTypeConfiguration<User>
         builder.Property(x => x.Fcm).HasColumnName("fcm").HasMaxLength(250);
         builder.Property(x => x.ContactCode).HasColumnName("contact_code")
             .IsRequired()
-            .HasMaxLength(8);
+            .HasMaxLength(30);
 
         builder.HasIndex(x => x.ContactCode)
             .IsUnique();

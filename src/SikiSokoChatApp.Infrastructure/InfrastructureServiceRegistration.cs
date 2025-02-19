@@ -36,7 +36,6 @@ public static class InfrastructureServiceRegistration
         services.AddScoped<IUserConversationRepository, UserConversationRepository>();
         services.AddScoped<IMessageRepository, MessageRepository>();
         services.AddScoped<IMediaContentRepository, MediaContentRepository>();
-        services.AddScoped<IContactRepository, ContactRepository>();
         services.AddScoped<IConversationRepository, ConversationRepository>();
 
         return services;

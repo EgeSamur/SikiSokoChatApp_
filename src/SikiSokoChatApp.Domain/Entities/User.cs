@@ -6,8 +6,7 @@ public class User : BaseEntity
 {
     public string? Username { get; set; }
     public string Fcm { get; set; }
+    public string Password { get; set; } // hashlemeden direkt tutacağım. kınadığım şeyi yapıyorum :)
     public string ContactCode { get; set; }
     public List<Conversation> Conversations { get; set; }
-    public List<Contact> Contacts { get; set; }
-
 }

@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SikiSokoChatApp.Shared", "s
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SikiSokoChatApp.API", "src\SikiSokoChatApp.API\SikiSokoChatApp.API.csproj", "{6DCE40F0-6CFA-4FEB-B5DF-56381C8F5FD7}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "build", "build", "{B52421EC-C6E2-4B4D-8501-0438C100CB4B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

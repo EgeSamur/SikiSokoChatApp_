@@ -8,6 +8,4 @@ public class Conversation : BaseEntity
     public bool IsGroup { get; set; }
     public List<UserConversation> Participants { get; set; }
     public List<Message> Messages { get; set; }
-
-
 }
