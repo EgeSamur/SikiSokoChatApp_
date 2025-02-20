@@ -29,7 +29,21 @@ namespace SikiSokoChatApp.API.Controllers
             var result = await _service.LoginAsync(dto);
             return Ok(result);
         }
-       
+
+        [HttpPost("get-all-users")]
+        public async Task<IActionResult> GetAllUsersAsync()
+        {
+            var result = await _service.GetAllUsers();
+            return Ok(result);
+        }
+
+
+        [HttpPost("delete-user")]
+        public async Task<IActionResult> DeleteUser(DeleteUserDto dto)
+        {
+            var result = await _service.DeleteUserAsync(dto);
+            return Ok(result);
+        }
 
     }
 }

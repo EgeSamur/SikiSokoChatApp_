@@ -8,4 +8,6 @@ public interface IUserService
 {
     Task<IDataResult<UniqueCodeResponse>> CreateAsync(RegisterDto dto);
     Task<IDataResult<LoggedDto>> LoginAsync(LoginDto dto);
+    Task<IResult> DeleteUserAsync(DeleteUserDto dto);
+    Task<IDataResult<PaginatedResponse<UserDto>>> GetAllUsers();
 }

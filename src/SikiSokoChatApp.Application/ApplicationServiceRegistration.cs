@@ -8,6 +8,7 @@ using SikiSokoChatApp.Shared.CrossCuttingConcerns.Logging.Serilog;
 using SikiSokoChatApp.Application.Abstractions.Services;
 using SikiSokoChatApp.Application.Features.Users;
 using SikiSokoChatApp.Application.Features;
+using SikiSokoChatApp.Application.Features.FileStorage;
 
 namespace SikiSokoChatApp.Application;
 
@@ -24,6 +25,7 @@ public static class ApplicationServiceRegistration
         });
         services.AddScoped<IUserService, UserService>();
         services.AddScoped<IConversationService, ConversationsService>();
+        services.AddScoped<IFileStorageService, FileStorageService>();
 
         services.AddHttpClient();
 

@@ -10,6 +10,7 @@ namespace SnifferApi.Application.Features.Users.Profiles
         public MappingProfiles()
         {
             //CreateMap<IPaginate<UserDto>, PaginatedResponse<UserDto>>();
+            CreateMap<IPaginate<UserDto>, PaginatedResponse<UserDto>>();
 
         }
     }

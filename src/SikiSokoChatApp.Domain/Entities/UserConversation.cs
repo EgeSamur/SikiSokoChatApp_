@@ -8,5 +8,4 @@ public class UserConversation : BaseEntity
     public int ConversationId { get; set; }
     public User User { get; set; }
     public Conversation Conversation { get; set; }
-
 }
